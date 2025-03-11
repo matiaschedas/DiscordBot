@@ -60,7 +60,7 @@ async def on_message(message):
     if message.author.name == "Quark Logger":
       WaApiSendMessage(f"Alguien entro o salio de discord")
     else:
-       WaApiSendMessage(f"{message.author.name} dice: {message.content}")
+      WaApiSendMessage(f"{message.author.name} dice: {message.content}")
   await bot.process_commands(message)
 
 @bot.command()
