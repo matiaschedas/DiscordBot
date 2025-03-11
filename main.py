@@ -56,8 +56,11 @@ async def on_message(message):
   if message.author == bot.user:
         return
   if message.channel.name == "voz-logs":
-    await message.channel.send(f"{message.author.name} dijo: {message.content}")
-    WaApiSendMessage(f"{message.author.name} dijo: {message.content}")
+    await message.channel.send("Alertando...")
+    if message.author.name == "Quark Logger":
+      WaApiSendMessage(f"Alguien entro o salio de discord")
+    else:
+       WaApiSendMessage(f"{message.author.name} dice: {message.content}")
   await bot.process_commands(message)
 
 @bot.command()
